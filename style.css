@@ -126,3 +126,122 @@ body {
         font-size: 11px;
     }
 }
+/* ===== СТРАНИЦА АССОРТИМЕНТА ===== */
+.subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
+}
+
+.assortment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    width: 100%;
+}
+
+.assortment-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.assortment-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 215, 0, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.assortment-card h3 {
+    font-size: 22px;
+    color: #ffd700;
+    margin-bottom: 4px;
+}
+
+.assortment-card .price {
+    font-size: 20px;
+    color: #ff6b6b;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.assortment-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.assortment-card ul li {
+    color: #ccc;
+    padding: 3px 0;
+    font-size: 14px;
+}
+
+.btn-buy {
+    width: 100%;
+    background: #ffd700;
+    color: #0a0a1a;
+    border: none;
+    padding: 10px 0;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-buy:hover {
+    background: #e6c200;
+    transform: scale(1.02);
+}
+
+.btn-back {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-back:hover {
+    color: #fff;
+}
+
+/* ===== АДАПТИВ ДЛЯ АССОРТИМЕНТА ===== */
+@media (max-width: 768px) {
+    .assortment-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    .assortment-card {
+        padding: 16px;
+    }
+    .assortment-card h3 {
+        font-size: 18px;
+    }
+    .assortment-card .price {
+        font-size: 17px;
+    }
+    .assortment-card ul li {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .assortment-grid {
+        grid-template-columns: 1fr;
+    }
+}
