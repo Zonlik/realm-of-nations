@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты — Realm of Nations</title>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -12,39 +13,86 @@
             padding: 40px 20px;
             max-width: 700px;
             margin: 0 auto;
-            line-height: 1.7;
+            line-height: 1.8;
+            min-height: 100vh;
         }
         h1 {
             color: #ffd700;
             text-align: center;
+            font-size: 36px;
+        }
+        h2 {
+            color: #ffd700;
+            margin-top: 30px;
+            font-size: 22px;
+        }
+        p {
+            color: #bbb;
         }
         a {
             color: #ffd700;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         .back {
             display: block;
             margin-top: 40px;
             text-align: center;
         }
+        .footer-note {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 215, 0, 0.1);
+            color: #555;
+            font-size: 14px;
+        }
+        .requisites {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+        .requisites p {
+            margin: 6px 0;
+        }
+        .requisites strong {
+            color: #ddd;
+        }
     </style>
 </head>
 <body>
+
     <h1>Контакты</h1>
-    <p><strong>Realm of Nations</strong></p>
+    <p style="text-align: center; font-size: 18px; color: #aaa;"><strong>Realm of Nations</strong></p>
 
-    <h2>Администрация</h2>
-    <p>Email: <a href="mailto:sanya69tver@gmail.com">sanya69tver@gmail.com</a></p>
-    <p>Discord: <a href="#">(скоро)</a></p>
-    <p>Telegram: <a href="#">(скоро)</a></p>
+    <h2>👑 Администрация</h2>
+    <p>📧 Email: <a href="mailto:sanya69tver@gmail.com">sanya69tver@gmail.com</a></p>
+    <p>💬 Discord: <a href="#">(скоро)</a></p>
+    <p>📱 Telegram: <a href="https://t.me/Zenlesis">@Zenlesis</a></p>
 
-    <h2>На сервере</h2>
+    <h2>🎮 На сервере</h2>
     <p>Напишите администратору: <strong>/msg Admin</strong></p>
 
-    <h2>Реквизиты</h2>
-    <p>ИП: (ваши данные)</p>
-    <p>ИНН: (ваш ИНН)</p>
-    <p>ОГРНИП: (ваш ОГРНИП)</p>
+    <h2>📋 Реквизиты самозанятого</h2>
+    <div class="requisites">
+        <p><strong>ФИО:</strong> Баринов Кирилл Сергеевич</p>
+        <p><strong>ИНН:</strong> 695005658533</p>
+        <p><strong>Email для чеков:</strong> sanya69tver@gmail.com</p>
+    </div>
+
+    <h2>📄 Юридическая информация</h2>
+    <p>Все платежи на сайте обрабатываются через платёжную систему <strong>ЮKassa (YooKassa)</strong>.</p>
+    <p>Чеки формируются в соответствии с законодательством РФ и отправляются на указанный email.</p>
+    <p>С полным текстом Пользовательского соглашения можно ознакомиться <a href="offer.html">здесь</a>.</p>
 
     <a href="index.html" class="back">← Вернуться на главную</a>
+
+    <div class="footer-note">
+        © 2026 Realm of Nations. Все права защищены.
+    </div>
+
 </body>
 </html>
