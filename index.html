@@ -8,16 +8,22 @@
 </head>
 <body>
 
-    <!-- Фоновая секция -->
     <section class="hero">
         <div class="overlay"></div>
         <div class="hero-content">
             <h1>Realm of Nations</h1>
             <p class="ip">realmofnations.my-craft.cc:36020</p>
-            <button class="btn" onclick="alert('Пока ничего не делает :)')">Кнопка</button>
+            <button class="btn" onclick="copyIP()">📋 Копировать IP</button>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script>
+        function copyIP() {
+            const ip = 'realmofnations.my-craft.cc:36020';
+            navigator.clipboard.writeText(ip);
+            alert('✅ IP скопирован: ' + ip);
+        }
+    </script>
+
 </body>
 </html>
