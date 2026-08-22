@@ -5,269 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Realm of Nations — Minecraft сервер</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Партиклы фон -->
-    <canvas id="particles"></canvas>
 
     <!-- Шапка -->
     <header>
         <nav>
             <div class="logo">⚔️ Realm of Nations</div>
-
-    <div class="scroll-indicator">
-        <span>↓</span>
-    </div>
-            <div class="burger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <ul>
-                <li><a href="#about" class="smooth">О сервере</a></li>
+            <ul>
+                <li><a href="#about">О сервере</a></li>
                 <li><a href="donate.html">Донат</a></li>
-                <li><a href="rules.html">Правила</a></li>
-                <li><a href="#status" class="smooth">Статус</a></li>
+                <li><a href="#rules">Правила</a></li>
+                <li><a href="#stats">Статистика</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Герой -->
+    <!-- Герой с IP -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="glitch" data-text="⚔️ Realm of Nations">⚔️ Realm of Nations</h1>
-            <p class="typing">Политический Minecraft сервер, где ты создаёшь свою империю</p>
+            <h1>⚔️ Realm of Nations</h1>
+            <p>Политический сервер, где ты создаёшь свою империю</p>
             <div class="ip-box">
                 <span id="ip">realmofnations.my-craft.cc:36020</span>
                 <button onclick="copyIP()">📋 Копировать</button>
             </div>
-
-    <div class="scroll-indicator">
-        <span>↓</span>
-    </div>
             <p class="online-status" id="status">🟢 Онлайн: <span id="players">0</span> игроков</p>
-            <a href="#about" class="btn btn-glow">Начать приключение</a>
         </div>
-
-    <div class="scroll-indicator">
-        <span>↓</span>
-    </div>
     </section>
 
     <!-- О сервере -->
     <section id="about" class="about">
-        <h2 data-aos="fade-up">🌟 О сервере</h2>
-        <p data-aos="fade-up" data-aos-delay="100"><strong>Realm of Nations</strong> — это уникальный политический сервер, где каждый игрок может стать лидером своей деревни, создавать союзы, торговать и воевать.</p>
+        <h2>🌟 О сервере</h2>
+        <p><strong>Realm of Nations</strong> — это уникальный политический сервер, где каждый игрок может стать лидером своей деревни, создавать союзы, торговать и воевать.</p>
         <div class="features">
-            <div class="feature" data-aos="flip-up" data-aos-delay="100">
+            <div class="feature">
                 <span>🏰</span>
                 <h3>Политика</h3>
                 <p>Создавай деревни, объединяйся в нации и управляй территориями</p>
             </div>
-
-    <div class="scroll-indicator">
-        <span>↓</span>
-    </div>
-            <div class="feature" data-aos="flip-up" data-aos-delay="200">
+            <div class="feature">
                 <span>💰</span>
                 <h3>Экономика</h3>
                 <p>Торгуй, зарабатывай и становись самым богатым игроком</p>
             </div>
-
-    <div class="scroll-indicator">
-        <span>↓</span>
-    </div>
-            <div class="feature" data-aos="flip-up" data-aos-delay="300">
+            <div class="feature">
                 <span>⚔️</span>
                 <h3>Войны</h3>
                 <p>Сражайся за земли, защищай свою нацию и захватывай новые территории</p>
             </div>
-
-    <div class="scroll-indicator">
-        <span>↓</span>
-    </div>
-            <div class="feature" data-aos="flip-up" data-aos-delay="400">
+            <div class="feature">
                 <span>🤝</span>
                 <h3>Сообщества</h3>
                 <p>Найди друзей, создай клан и вместе стройте великую империю</p>
             </div>
-
-    <div class="scroll-indicator">
-        <span>↓</span>
-    </div>
-        </div>
-
-    <div class="scroll-indicator">
-        <span>↓</span>
-    </div>
-    </section>
-
-    <!-- Статус сервера -->
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
         </div>
     </section>
-    <section id="status" class="status">
 
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-        <h2>🟢 Статус сервера</h2>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-        <div class="status-card">
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-            <div class="status-item">
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-                <span class="label">Статус:</span>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-                <span class="value" id="server-status">Загрузка...</span>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-            </div>
-
-    <section class="stats">
+    <!-- Статистика -->
+    <section id="stats" class="stats">
         <h2>📊 Статистика сервера</h2>
         <div class="stats-grid">
             <div class="stat-item">
@@ -289,604 +85,42 @@
         </div>
     </section>
 
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
+    <!-- Правила -->
+    <section id="rules" class="rules">
+        <h2>📜 Правила сервера</h2>
+        <div class="rules-list">
+            <div class="rule-item">
+                <span>1.</span>
+                <div>
+                    <h3>Уважение</h3>
+                    <p>Уважай всех игроков и администрацию</p>
+                </div>
             </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
+            <div class="rule-item">
+                <span>2.</span>
+                <div>
+                    <h3>Читы</h3>
+                    <p>Не используй читы — бан</p>
+                </div>
             </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-    <div class="scroll-indicator">
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-        <span>↓</span>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-    </div>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-            <div class="status-item">
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-                <span class="label">Онлайн:</span>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-                <span class="value" id="online-players">0</span>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-            </div>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
+            <div class="rule-item">
+                <span>3.</span>
+                <div>
+                    <h3>Гриферство</h3>
+                    <p>Не разрушай чужие постройки</p>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-    <div class="scroll-indicator">
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-        <span>↓</span>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-    </div>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-            <div class="status-item">
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-                <span class="label">Версия:</span>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-                <span class="value" id="server-version">1.21.11</span>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-            </div>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
+    <!-- Донат-баннер -->
+    <section class="donate-cta">
+        <h2>👑 Поддержи сервер</h2>
+        <p>Купи титул и получи уникальные привилегии!</p>
+        <a href="donate.html" class="btn">Перейти в магазин</a>
     </section>
 
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-    <div class="scroll-indicator">
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-        <span>↓</span>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-    </div>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-        </div>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-    <div class="scroll-indicator">
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-        <span>↓</span>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-    </div>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-    </section>
-
-    <section class="stats">
-        <h2>📊 Статистика сервера</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number" id="total-players">0</span>
-                <span class="stat-label">Всего игроков</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="online-now">0</span>
-                <span class="stat-label">Сейчас онлайн</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">1.21.11</span>
-                <span class="stat-label">Версия</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚔️</span>
-                <span class="stat-label">Политический сервер</span>
-            </div>
-        </div>
-    </section>
-
+    <!-- Отзывы -->
     <section class="reviews">
         <h2>💬 Что говорят игроки</h2>
         <div class="reviews-grid">
@@ -904,19 +138,13 @@
             </div>
         </div>
     </section>
-    <!-- Кнопка доната -->
-    <section class="donate-cta">
-        <h2>👑 Поддержи сервер</h2>
-        <p>Купи титул и получи уникальные привилегии!</p>
-        <a href="donate.html" class="btn btn-gold">Перейти в магазин</a>
-    </section>
 
     <!-- Подвал -->
     <footer>
         <p>© 2026 Realm of Nations. Сделано с ❤️</p>
+        <p>IP: <span class="footer-ip">realmofnations.my-craft.cc:36020</span></p>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

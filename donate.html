@@ -5,26 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Донат — Realm of Nations</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .donate-page {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .donate-page h1 {
+            text-align: center;
+            font-size: 40px;
+            color: #ffd700;
+            margin-bottom: 8px;
+        }
+        .donate-page .subtitle {
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 40px;
+        }
+        .donate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .donate-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 215, 0, 0.12);
+            border-radius: 16px;
+            padding: 24px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        .donate-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.08);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+        .donate-card .icon {
+            font-size: 48px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .donate-card h3 {
+            color: #ffd700;
+            font-size: 22px;
+        }
+        .donate-card .price {
+            font-size: 24px;
+            color: #ff6b6b;
+            font-weight: bold;
+            margin: 8px 0 16px;
+        }
+        .donate-card ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .donate-card ul li {
+            color: #ccc;
+            padding: 4px 0;
+            font-size: 14px;
+        }
+        .donate-card .btn-buy {
+            background: #ffd700;
+            color: #0a0a1a;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        .donate-card .btn-buy:hover {
+            background: #e6c200;
+        }
+        .donate-info {
+            margin-top: 40px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 16px;
+            padding: 24px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .donate-info h3 {
+            color: #ffd700;
+            text-align: center;
+        }
+        .donate-info p {
+            color: #aaa;
+            padding: 4px 0;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: #ffd700;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <nav>
             <div class="logo">⚔️ Realm of Nations</div>
             <ul>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="donate.html" class="active">Донат</a></li>
-                <li><a href="rules.html">Правила</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="donate-page">
         <h1>👑 Донат-меню</h1>
-        <p>Выбери титул и получи уникальные привилегии на сервере!</p>
+        <p class="subtitle">Выбери титул и получи уникальные привилегии на сервере!</p>
 
         <div class="donate-grid">
+
+            <!-- Торговец -->
             <div class="donate-card">
-                <div class="donate-icon">🧾</div>
+                <span class="icon">🧾</span>
                 <h3>Торговец</h3>
                 <div class="price">100 ₽</div>
                 <ul>
@@ -33,10 +138,12 @@
                     <li>🧢 /hat</li>
                     <li>🏠 1 дом</li>
                 </ul>
-                <button onclick="buyDonate('Торговец', 100)">Купить</button>
+                <button class="btn-buy" onclick="buyDonate('Торговец', 100)">Купить</button>
             </div>
+
+            <!-- Рыцарь -->
             <div class="donate-card">
-                <div class="donate-icon">🛡️</div>
+                <span class="icon">🛡️</span>
                 <h3>Рыцарь</h3>
                 <div class="price">300 ₽</div>
                 <ul>
@@ -45,10 +152,12 @@
                     <li>🏠 2 дома</li>
                     <li>🏷️ Префикс: 🛡️ Рыцарь</li>
                 </ul>
-                <button onclick="buyDonate('Рыцарь', 300)">Купить</button>
+                <button class="btn-buy" onclick="buyDonate('Рыцарь', 300)">Купить</button>
             </div>
+
+            <!-- Барон -->
             <div class="donate-card">
-                <div class="donate-icon">⚔️</div>
+                <span class="icon">⚔️</span>
                 <h3>Барон</h3>
                 <div class="price">500 ₽</div>
                 <ul>
@@ -58,10 +167,12 @@
                     <li>🏠 3 дома</li>
                     <li>🌈 Цветной ник</li>
                 </ul>
-                <button onclick="buyDonate('Барон', 500)">Купить</button>
+                <button class="btn-buy" onclick="buyDonate('Барон', 500)">Купить</button>
             </div>
+
+            <!-- Граф -->
             <div class="donate-card">
-                <div class="donate-icon">🏰</div>
+                <span class="icon">🏰</span>
                 <h3>Граф</h3>
                 <div class="price">800 ₽</div>
                 <ul>
@@ -71,10 +182,12 @@
                     <li>🏠 5 домов</li>
                     <li>🌈 Цветной ник</li>
                 </ul>
-                <button onclick="buyDonate('Граф', 800)">Купить</button>
+                <button class="btn-buy" onclick="buyDonate('Граф', 800)">Купить</button>
             </div>
+
+            <!-- Герцог -->
             <div class="donate-card">
-                <div class="donate-icon">👑</div>
+                <span class="icon">👑</span>
                 <h3>Герцог</h3>
                 <div class="price">1200 ₽</div>
                 <ul>
@@ -84,10 +197,12 @@
                     <li>🔇 /mute, /kick</li>
                     <li>🏠 7 домов</li>
                 </ul>
-                <button onclick="buyDonate('Герцог', 1200)">Купить</button>
+                <button class="btn-buy" onclick="buyDonate('Герцог', 1200)">Купить</button>
             </div>
+
+            <!-- Король -->
             <div class="donate-card">
-                <div class="donate-icon">💎</div>
+                <span class="icon">💎</span>
                 <h3>Король</h3>
                 <div class="price">2500 ₽</div>
                 <ul>
@@ -98,8 +213,9 @@
                     <li>⏳ Без кулдауна на всё</li>
                     <li>🏠 10 домов</li>
                 </ul>
-                <button onclick="buyDonate('Король', 2500)">Купить</button>
+                <button class="btn-buy" onclick="buyDonate('Король', 2500)">Купить</button>
             </div>
+
         </div>
 
         <div class="donate-info">
@@ -107,7 +223,10 @@
             <p>1. Выбери титул и нажми "Купить"</p>
             <p>2. Оплати удобным способом: 💳 Карта, 📱 СБП</p>
             <p>3. После оплаты напиши администратору: <strong>/msg Admin</strong></p>
+            <p>4. Получи титул и наслаждайся привилегиями!</p>
         </div>
+
+        <a href="index.html" class="back-link">← Вернуться на главную</a>
     </section>
 
     <footer>
