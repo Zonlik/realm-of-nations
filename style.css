@@ -73,7 +73,7 @@ body {
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
     min-width: 260px;
-    margin-top: 585px; /* Опускаем кнопку ниже */
+    margin-top: 535px; /* Опускаем кнопку ниже */
 }
 
 .btn:hover {
