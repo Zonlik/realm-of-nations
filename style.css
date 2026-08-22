@@ -37,13 +37,17 @@ body {
     z-index: 1;
 }
 
-/* ===== КОНТЕНТ ПО ЦЕНТРУ (ВЫШЕ) ===== */
+/* ===== КОНТЕНТ ПО ЦЕНТРУ ===== */
 .hero-content {
     position: relative;
     z-index: 2;
     color: #fff;
     padding: 20px;
-    margin-top: -400px; /* Поднимаем выше */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -200px; /* Поднимаем всё выше */
 }
 
 .hero-content h1 {
@@ -54,7 +58,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* ===== КНОПКА ===== */
+/* ===== НОВАЯ КНОПКА "К АССОРТИМЕНТУ" ===== */
 .btn {
     display: inline-block;
     background: rgba(255, 255, 255, 0.08);
@@ -69,6 +73,7 @@ body {
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
     min-width: 260px;
+    margin-top: 300px; /* Опускаем кнопку на 300px ниже */
 }
 
 .btn:hover {
@@ -116,6 +121,7 @@ body {
         padding: 12px 32px;
         font-size: 15px;
         min-width: 200px;
+        margin-top: 200px; /* На телефонах тоже опускаем */
     }
     .ip-corner {
         bottom: 15px;
@@ -123,16 +129,4 @@ body {
         padding: 6px 14px;
         font-size: 11px;
     }
-}
-
-/* ===== IP КОПИРОВАНИЕ ===== */
-.ip-corner {
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.ip-corner:hover {
-    color: #fff;
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-    transform: scale(1.02);
 }
