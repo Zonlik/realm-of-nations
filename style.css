@@ -47,7 +47,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin-top убран — текст теперь строго по центру */
 }
 
 .hero-content h1 {
@@ -73,7 +72,7 @@ body {
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
     min-width: 260px;
-    margin-top: 450px; /* Было 550, уменьшил на 100px */
+    margin-top: 435px; /* Было 450, уменьшил на 15px */
 }
 
 .btn:hover {
@@ -118,7 +117,7 @@ body {
         padding: 12px 32px;
         font-size: 15px;
         min-width: 200px;
-        margin-top: 250px;
+        margin-top: 235px; /* Тоже поднимаем на 15px */
     }
     .ip-corner {
         bottom: 15px;
