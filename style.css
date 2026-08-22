@@ -1,3 +1,4 @@
+/* ===== ОБЩИЕ НАСТРОЙКИ ===== */
 * {
     margin: 0;
     padding: 0;
@@ -6,19 +7,24 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    height: auto;
+    overflow-y: auto;
+    background: #0a0a1a;
 }
 
+/* ===== ГЛАВНЫЙ ЭКРАН ===== */
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
-    background: url('1.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    height: auto;
+    background: url('1.jpg') center/cover no-repeat fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 20px 20px 120px 20px;
 }
 
 .hero::before {
@@ -37,7 +43,6 @@ body {
     z-index: 1;
 }
 
-/* ===== КОНТЕНТ ПО ЦЕНТРУ ===== */
 .hero-content {
     position: relative;
     z-index: 2;
@@ -139,6 +144,29 @@ body {
     color: rgba(255, 255, 255, 0.8);
 }
 
+/* ===== ПОДВАЛ (ФУТЕР) ===== */
+footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+    background: #0a0a0a;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffd700;
+}
+
 /* ===== АДАПТИВ ===== */
 @media (max-width: 768px) {
     .hero-content h1 {
@@ -163,28 +191,4 @@ body {
         padding: 6px 14px;
         font-size: 11px;
     }
-}
-
-/* ===== ПОДВАЛ (ФУТЕР) ===== */
-footer {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 20px;
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 14px;
-    background: #0a0a0a;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    margin-top: 40px;
-    width: 100%;
-}
-
-footer a {
-    color: rgba(255, 255, 255, 0.5);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #ffd700;
 }
