@@ -43,7 +43,7 @@ body {
     z-index: 2;
     color: #fff;
     padding: 20px;
-    margin-top: -150px; /* Поднимаем выше */
+    margin-top: -425px; /* Поднимаем выше */
 }
 
 .hero-content h1 {
