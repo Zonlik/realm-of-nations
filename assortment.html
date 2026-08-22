@@ -6,7 +6,6 @@
     <title>Ассортимент — Realm of Nations</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Сброс для страницы с прокруткой */
         body {
             overflow-y: auto;
             height: auto;
@@ -35,7 +34,6 @@
             text-align: center;
         }
 
-        /* ===== СЕТКА КАРТОЧЕК ===== */
         .assortment-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -45,7 +43,6 @@
             width: 100%;
         }
 
-        /* ===== КАРТОЧКА ===== */
         .assortment-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(8px);
@@ -57,7 +54,6 @@
             display: flex;
             flex-direction: column;
         }
-
         .assortment-card:hover {
             transform: translateY(-6px);
             border-color: rgba(255, 215, 0, 0.25);
@@ -68,29 +64,25 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
-
         .card-icon {
-            font-size: 34px;
+            font-size: 32px;
         }
-
         .card-header h3 {
             font-size: 24px;
             font-weight: 700;
             margin: 0;
         }
-
         .card-price {
             font-size: 22px;
             font-weight: 700;
             color: #ff6b6b;
-            margin: 4px 0 14px 0;
+            margin: 2px 0 12px 0;
         }
-
         .card-price span {
             font-weight: 400;
-            color: rgba(255, 255, 255, 0.4);
+            color: rgba(255, 255, 255, 0.35);
             font-size: 14px;
         }
 
@@ -100,7 +92,6 @@
             margin: 0 0 16px 0;
             flex: 1;
         }
-
         .card-features li {
             color: #ccc;
             padding: 4px 0;
@@ -109,7 +100,6 @@
             align-items: baseline;
             gap: 6px;
         }
-
         .card-features li .cmd {
             color: #ffd700;
             font-family: monospace;
@@ -117,7 +107,6 @@
             padding: 0 6px;
             border-radius: 4px;
         }
-
         .card-features li .highlight {
             color: #fff;
         }
@@ -135,7 +124,6 @@
             transition: all 0.3s ease;
             margin-top: 6px;
         }
-
         .card-buy:hover {
             background: #e6c200;
             transform: scale(1.02);
@@ -150,7 +138,6 @@
             text-align: center;
             width: 100%;
         }
-
         .back-link:hover {
             color: #fff;
         }
@@ -163,7 +150,6 @@
         .rank-duke h3 { color: #f0c060; }
         .rank-king h3 { color: #ff5555; }
 
-        /* ===== АДАПТИВ ===== */
         @media (max-width: 768px) {
             .assortment-grid {
                 grid-template-columns: 1fr;
@@ -185,11 +171,11 @@
 
         <div class="hero-content">
             <h1 style="font-size: 48px;">Ассортимент</h1>
-            <p class="subtitle">Выбери титул и получи уникальные привилегии</p>
+            <p class="subtitle">Выбери титул и получи доступ к уникальным возможностям</p>
 
             <div class="assortment-grid">
 
-                <!-- ===== ТОРГОВЕЦ ===== -->
+                <!-- ТОРГОВЕЦ -->
                 <div class="assortment-card rank-trader">
                     <div class="card-header">
                         <span class="card-icon">🧾</span>
@@ -197,17 +183,17 @@
                     </div>
                     <div class="card-price">100 ₽ <span>/ навсегда</span></div>
                     <ul class="card-features">
-                        <li>🎁 <span class="cmd">/kit trader</span></li>
-                        <li>🏪 Доступ к магазину</li>
-                        <li>💸 Безлимитные переводы</li>
-                        <li>🏠 1 дом <span class="highlight">(/home)</span></li>
-                        <li>🔨 <span class="cmd">/craft</span> <span class="cmd">/ec</span></li>
-                        <li>🏷️ Префикс: <span style="color:#e0c070;">🧾 Торговец</span></li>
+                        <li><span class="cmd">/kit trader</span> — стартовый набор</li>
+                        <li>Доступ к магазину</li>
+                        <li>Безлимитные переводы <span class="cmd">/pay</span></li>
+                        <li>1 дом <span class="cmd">/home</span></li>
+                        <li><span class="cmd">/craft</span> <span class="cmd">/ec</span> — верстак и эндер-сундук</li>
+                        <li>Префикс: <span style="color:#e0c070;">Торговец</span></li>
                     </ul>
                     <button class="card-buy" onclick="buyDonate('Торговец', 100)">Купить</button>
                 </div>
 
-                <!-- ===== РЫЦАРЬ ===== -->
+                <!-- РЫЦАРЬ -->
                 <div class="assortment-card rank-knight">
                     <div class="card-header">
                         <span class="card-icon">🛡️</span>
@@ -215,16 +201,16 @@
                     </div>
                     <div class="card-price">300 ₽ <span>/ навсегда</span></div>
                     <ul class="card-features">
-                        <li>🎁 <span class="cmd">/kit knight</span></li>
-                        <li>🕊️ <span class="cmd">/fly</span> — полёт</li>
-                        <li>🍗 <span class="cmd">/feed</span> — еда</li>
-                        <li>🏠 2 дома <span class="highlight">(/home)</span></li>
-                        <li>🏷️ Префикс: <span style="color:#7ec87e;">🛡️ Рыцарь</span></li>
+                        <li><span class="cmd">/kit knight</span> — набор рыцаря</li>
+                        <li><span class="cmd">/fly</span> — режим полёта</li>
+                        <li><span class="cmd">/feed</span> — восстановление голода</li>
+                        <li>2 дома <span class="cmd">/home</span></li>
+                        <li>Префикс: <span style="color:#7ec87e;">Рыцарь</span></li>
                     </ul>
                     <button class="card-buy" onclick="buyDonate('Рыцарь', 300)">Купить</button>
                 </div>
 
-                <!-- ===== БАРОН ===== -->
+                <!-- БАРОН -->
                 <div class="assortment-card rank-baron">
                     <div class="card-header">
                         <span class="card-icon">⚔️</span>
@@ -232,18 +218,17 @@
                     </div>
                     <div class="card-price">500 ₽ <span>/ навсегда</span></div>
                     <ul class="card-features">
-                        <li>🎁 <span class="cmd">/kit baron</span></li>
-                        <li>🕊️ <span class="cmd">/fly</span></li>
-                        <li>💚 <span class="cmd">/heal</span> — лечение</li>
-                        <li>⏳ <span class="cmd">/rtp</span> без кулдауна</li>
-                        <li>🏠 3 дома</li>
-                        <li>🌈 Цветной ник в чате</li>
-                        <li>🏷️ Префикс: <span style="color:#6bb5d9;">⚔️ Барон</span></li>
+                        <li><span class="cmd">/kit baron</span> — набор барона</li>
+                        <li><span class="cmd">/fly</span> — режим полёта</li>
+                        <li><span class="cmd">/heal</span> — полное лечение</li>
+                        <li><span class="cmd">/rtp</span> без кулдауна</li>
+                        <li>3 дома <span class="cmd">/home</span></li>
+                        <li>Префикс: <span style="color:#6bb5d9;">Барон</span></li>
                     </ul>
                     <button class="card-buy" onclick="buyDonate('Барон', 500)">Купить</button>
                 </div>
 
-                <!-- ===== ГРАФ ===== -->
+                <!-- ГРАФ -->
                 <div class="assortment-card rank-count">
                     <div class="card-header">
                         <span class="card-icon">🏰</span>
@@ -251,18 +236,17 @@
                     </div>
                     <div class="card-price">800 ₽ <span>/ навсегда</span></div>
                     <ul class="card-features">
-                        <li>🎁 <span class="cmd">/kit count</span></li>
-                        <li>🕊️ <span class="cmd">/fly</span></li>
-                        <li>✏️ <span class="cmd">/nick</span> — смена ника</li>
-                        <li>🔧 <span class="cmd">/anvil</span> <span class="cmd">/grindstone</span></li>
-                        <li>🏠 5 домов</li>
-                        <li>🌈 Цветной ник</li>
-                        <li>🏷️ Префикс: <span style="color:#b47cd9;">🏰 Граф</span></li>
+                        <li><span class="cmd">/kit count</span> — набор графа</li>
+                        <li><span class="cmd">/fly</span> — режим полёта</li>
+                        <li><span class="cmd">/nick</span> — смена ника</li>
+                        <li><span class="cmd">/anvil</span> <span class="cmd">/grindstone</span> — наковальня и точило</li>
+                        <li>5 домов <span class="cmd">/home</span></li>
+                        <li>Префикс: <span style="color:#b47cd9;">Граф</span></li>
                     </ul>
                     <button class="card-buy" onclick="buyDonate('Граф', 800)">Купить</button>
                 </div>
 
-                <!-- ===== ГЕРЦОГ ===== -->
+                <!-- ГЕРЦОГ -->
                 <div class="assortment-card rank-duke">
                     <div class="card-header">
                         <span class="card-icon">👑</span>
@@ -270,18 +254,18 @@
                     </div>
                     <div class="card-price">1200 ₽ <span>/ навсегда</span></div>
                     <ul class="card-features">
-                        <li>🎁 <span class="cmd">/kit duke</span></li>
-                        <li>🕊️ <span class="cmd">/fly</span></li>
-                        <li>✏️ <span class="cmd">/nick</span></li>
-                        <li>⚒️ <span class="cmd">/smithing</span> <span class="cmd">/enchant</span></li>
-                        <li>🔇 <span class="cmd">/mute</span> <span class="cmd">/kick</span></li>
-                        <li>🏠 7 домов</li>
-                        <li>🏷️ Префикс: <span style="color:#f0c060;">👑 Герцог</span></li>
+                        <li><span class="cmd">/kit duke</span> — набор герцога</li>
+                        <li><span class="cmd">/fly</span> — режим полёта</li>
+                        <li><span class="cmd">/nick</span> — смена ника</li>
+                        <li><span class="cmd">/smithing</span> <span class="cmd">/enchant</span> — кузница и зачарования</li>
+                        <li><span class="cmd">/mute</span> <span class="cmd">/kick</span> — модерация</li>
+                        <li>7 домов <span class="cmd">/home</span></li>
+                        <li>Префикс: <span style="color:#f0c060;">Герцог</span></li>
                     </ul>
                     <button class="card-buy" onclick="buyDonate('Герцог', 1200)">Купить</button>
                 </div>
 
-                <!-- ===== КОРОЛЬ ===== -->
+                <!-- КОРОЛЬ -->
                 <div class="assortment-card rank-king">
                     <div class="card-header">
                         <span class="card-icon">💎</span>
@@ -289,14 +273,14 @@
                     </div>
                     <div class="card-price">2500 ₽ <span>/ навсегда</span></div>
                     <ul class="card-features">
-                        <li>🎁 <span class="cmd">/kit king</span></li>
-                        <li>🕊️ <span class="cmd">/fly</span></li>
-                        <li>✏️ <span class="cmd">/nick</span></li>
-                        <li>🌍 <span class="cmd">/tp</span> <span class="cmd">/gamemode</span></li>
-                        <li>🔇 <span class="cmd">/mute</span> <span class="cmd">/kick</span></li>
-                        <li>⚡ Без кулдауна на всё</li>
-                        <li>🏠 10 домов</li>
-                        <li>🏷️ Префикс: <span style="color:#ff5555;">💎 Король</span></li>
+                        <li><span class="cmd">/kit king</span> — набор короля</li>
+                        <li><span class="cmd">/fly</span> — режим полёта</li>
+                        <li><span class="cmd">/nick</span> — смена ника</li>
+                        <li><span class="cmd">/tp</span> — телепортация</li>
+                        <li><span class="cmd">/mute</span> <span class="cmd">/kick</span> — модерация</li>
+                        <li>Без кулдауна на все команды</li>
+                        <li>10 домов <span class="cmd">/home</span></li>
+                        <li>Префикс: <span style="color:#ff5555;">Король</span></li>
                     </ul>
                     <button class="card-buy" onclick="buyDonate('Король', 2500)">Купить</button>
                 </div>
