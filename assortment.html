@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
+            margin: 0;
+            padding: 0;
             overflow-y: auto;
             height: auto;
             min-height: 100vh;
-            margin: 0;
-            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
         }
 
         .hero {
@@ -23,7 +24,6 @@
             display: flex;
             align-items: flex-start;
             justify-content: center;
-            text-align: center;
         }
 
         .hero::before {
@@ -33,6 +33,13 @@
             background: inherit;
             filter: blur(4px);
             z-index: 0;
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
         }
 
         .hero-content {
@@ -208,7 +215,6 @@
 
             <div class="assortment-grid">
 
-                <!-- ТОРГОВЕЦ -->
                 <div class="assortment-card rank-trader">
                     <div class="card-header"><h3>Торговец</h3></div>
                     <div class="card-price">100 ₽ <span>/ навсегда</span></div>
@@ -221,7 +227,6 @@
                     <button class="card-buy" onclick="buyDonate('Торговец', 100)">Купить</button>
                 </div>
 
-                <!-- РЫЦАРЬ -->
                 <div class="assortment-card rank-knight">
                     <div class="card-header"><h3>Рыцарь</h3></div>
                     <div class="card-price">300 ₽ <span>/ навсегда</span></div>
@@ -235,7 +240,6 @@
                     <button class="card-buy" onclick="buyDonate('Рыцарь', 300)">Купить</button>
                 </div>
 
-                <!-- БАРОН -->
                 <div class="assortment-card rank-baron">
                     <div class="card-header"><h3>Барон</h3></div>
                     <div class="card-price">500 ₽ <span>/ навсегда</span></div>
@@ -250,7 +254,6 @@
                     <button class="card-buy" onclick="buyDonate('Барон', 500)">Купить</button>
                 </div>
 
-                <!-- ГРАФ -->
                 <div class="assortment-card rank-count">
                     <div class="card-header"><h3>Граф</h3></div>
                     <div class="card-price">800 ₽ <span>/ навсегда</span></div>
@@ -265,7 +268,6 @@
                     <button class="card-buy" onclick="buyDonate('Граф', 800)">Купить</button>
                 </div>
 
-                <!-- ГЕРЦОГ -->
                 <div class="assortment-card rank-duke">
                     <div class="card-header"><h3>Герцог</h3></div>
                     <div class="card-price">1200 ₽ <span>/ навсегда</span></div>
@@ -281,7 +283,6 @@
                     <button class="card-buy" onclick="buyDonate('Герцог', 1200)">Купить</button>
                 </div>
 
-                <!-- КОРОЛЬ -->
                 <div class="assortment-card rank-king">
                     <div class="card-header"><h3>Король</h3></div>
                     <div class="card-price">2500 ₽ <span>/ навсегда</span></div>
@@ -303,13 +304,11 @@
             <a href="index.html" class="back-link">← Вернуться на главную</a>
         </div>
 
-        <!-- IP в правом нижнем углу -->
         <div class="ip-corner" onclick="copyIP()">
             <span>realmofnations.my-craft.cc:36020</span>
         </div>
     </section>
 
-    <!-- ПОДВАЛ -->
     <footer>
         <p>© 2026 Realm of Nations</p>
         <p>
