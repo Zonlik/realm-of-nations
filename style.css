@@ -124,3 +124,15 @@ body {
         font-size: 11px;
     }
 }
+
+/* ===== IP КОПИРОВАНИЕ ===== */
+.ip-corner {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ip-corner:hover {
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    transform: scale(1.02);
+}
