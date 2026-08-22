@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ассортимент — Realm of Nations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="hero">
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <h1>Ассортимент</h1>
+            <p class="subtitle">Выбери свой титул и получи уникальные привилегии</p>
+
+            <div class="assortment-grid">
+                <!-- Торговец -->
+                <div class="assortment-card">
+                    <div class="card-icon">🧾</div>
+                    <h3>Торговец</h3>
+                    <div class="price">100 ₽</div>
+                    <ul>
+                        <li>🎁 /kit trader</li>
+                        <li>🏪 Доступ к магазину</li>
+                        <li>💸 Безлимитные переводы</li>
+                        <li>🏠 1 дом</li>
+                        <li>🔨 /craft, /ec</li>
+                    </ul>
+                    <button class="btn-buy" onclick="buyDonate('Торговец', 100)">Купить</button>
+                </div>
+
+                <!-- Рыцарь -->
+                <div class="assortment-card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Рыцарь</h3>
+                    <div class="price">300 ₽</div>
+                    <ul>
+                        <li>🎁 /kit knight</li>
+                        <li>🕊️ /fly</li>
+                        <li>🍗 /feed</li>
+                        <li>🏠 2 дома</li>
+                        <li>🏷️ Префикс: 🛡️ Рыцарь</li>
+                    </ul>
+                    <button class="btn-buy" onclick="buyDonate('Рыцарь', 300)">Купить</button>
+                </div>
+
+                <!-- Барон -->
+                <div class="assortment-card">
+                    <div class="card-icon">⚔️</div>
+                    <h3>Барон</h3>
+                    <div class="price">500 ₽</div>
+                    <ul>
+                        <li>🎁 /kit baron</li>
+                        <li>🕊️ /fly</li>
+                        <li>💚 /heal</li>
+                        <li>⏳ /rtp без кулдауна</li>
+                        <li>🏠 3 дома</li>
+                        <li>🌈 Цветной ник</li>
+                    </ul>
+                    <button class="btn-buy" onclick="buyDonate('Барон', 500)">Купить</button>
+                </div>
+
+                <!-- Граф -->
+                <div class="assortment-card">
+                    <div class="card-icon">🏰</div>
+                    <h3>Граф</h3>
+                    <div class="price">800 ₽</div>
+                    <ul>
+                        <li>🎁 /kit count</li>
+                        <li>🕊️ /fly</li>
+                        <li>✏️ /nick</li>
+                        <li>🔧 /anvil, /grindstone</li>
+                        <li>🏠 5 домов</li>
+                        <li>🌈 Цветной ник</li>
+                    </ul>
+                    <button class="btn-buy" onclick="buyDonate('Граф', 800)">Купить</button>
+                </div>
+
+                <!-- Герцог -->
+                <div class="assortment-card">
+                    <div class="card-icon">👑</div>
+                    <h3>Герцог</h3>
+                    <div class="price">1200 ₽</div>
+                    <ul>
+                        <li>🎁 /kit duke</li>
+                        <li>🕊️ /fly</li>
+                        <li>✏️ /nick</li>
+                        <li>⚒️ /smithing, /enchant</li>
+                        <li>🔇 /mute, /kick</li>
+                        <li>🏠 7 домов</li>
+                    </ul>
+                    <button class="btn-buy" onclick="buyDonate('Герцог', 1200)">Купить</button>
+                </div>
+
+                <!-- Король -->
+                <div class="assortment-card">
+                    <div class="card-icon">💎</div>
+                    <h3>Король</h3>
+                    <div class="price">2500 ₽</div>
+                    <ul>
+                        <li>🎁 /kit king</li>
+                        <li>🕊️ /fly</li>
+                        <li>✏️ /nick</li>
+                        <li>🌍 /tp, /gamemode</li>
+                        <li>🔇 /mute, /kick</li>
+                        <li>🏠 10 домов</li>
+                        <li>⚡ Без кулдауна на всё</li>
+                    </ul>
+                    <button class="btn-buy" onclick="buyDonate('Король', 2500)">Купить</button>
+                </div>
+            </div>
+
+            <a href="index.html" class="btn-back">← Вернуться на главную</a>
+        </div>
+
+        <!-- IP в правом нижнем углу -->
+        <div class="ip-corner" onclick="copyIP()">
+            <span>realmofnations.my-craft.cc:36020</span>
+        </div>
+    </section>
+
+    <script>
+        function copyIP() {
+            const ip = 'realmofnations.my-craft.cc:36020';
+            navigator.clipboard.writeText(ip);
+            alert('✅ IP скопирован: ' + ip);
+        }
+
+        function buyDonate(title, price) {
+            alert('Для покупки "' + title + '" за ' + price + ' ₽ напишите администратору: /msg Admin');
+        }
+    </script>
+
+</body>
+</html>
