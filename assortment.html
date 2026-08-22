@@ -6,27 +6,44 @@
     <title>Ассортимент — Realm of Nations</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Полностью убираем фиксацию фона и делаем страницу скроллящейся */
         body {
             overflow-y: auto;
             height: auto;
             min-height: 100vh;
+            margin: 0;
+            padding: 0;
         }
+
         .hero {
-            height: auto;
+            position: relative;
             min-height: 100vh;
-            padding: 40px 20px;
+            height: auto;
+            padding: 60px 20px 100px 20px;
+            background: url('2.jpg') center/cover no-repeat fixed;
+            display: flex;
             align-items: flex-start;
-            padding-top: 60px;
+            justify-content: center;
+            text-align: center;
         }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: inherit;
+            filter: blur(4px);
+            z-index: 0;
+        }
+
         .hero-content {
-            margin-top: 0 !important;
+            position: relative;
+            z-index: 2;
             width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .ip-corner {
-            position: fixed;
-            bottom: 16px;
-            right: 16px;
-        }
+
         .subtitle {
             font-size: 18px;
             color: rgba(255, 255, 255, 0.7);
@@ -34,15 +51,16 @@
             text-align: center;
         }
 
+        /* ===== СЕТКА КАРТОЧЕК ===== */
         .assortment-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 28px;
-            max-width: 1200px;
-            margin: 0 auto 40px;
             width: 100%;
+            margin-bottom: 40px;
         }
 
+        /* ===== КАРТОЧКА ===== */
         .assortment-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(8px);
@@ -54,6 +72,7 @@
             display: flex;
             flex-direction: column;
         }
+
         .assortment-card:hover {
             transform: translateY(-6px);
             border-color: rgba(255, 215, 0, 0.25);
@@ -107,9 +126,6 @@
             padding: 0 6px;
             border-radius: 4px;
         }
-        .card-features li .highlight {
-            color: #fff;
-        }
 
         .card-buy {
             width: 100%;
@@ -140,6 +156,30 @@
         }
         .back-link:hover {
             color: #fff;
+        }
+
+        /* ===== IP В ПРАВОМ НИЖНЕМ УГЛУ ===== */
+        .ip-corner {
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+            z-index: 999;
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            user-select: none;
+        }
+        .ip-corner:hover {
+            background: rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.8);
         }
 
         /* ===== ЦВЕТА РАНГОВ ===== */
