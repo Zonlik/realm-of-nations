@@ -47,7 +47,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: -90px; /* Поднимаем всё выше */
+    margin-top: -50px; /* Поднимаем всё выше */
 }
 
 .hero-content h1 {
@@ -73,7 +73,7 @@ body {
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
     min-width: 260px;
-    margin-top: 535px; /* Опускаем кнопку ниже */
+    margin-top: 520px; /* Опускаем кнопку ниже */
 }
 
 .btn:hover {
