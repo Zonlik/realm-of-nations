@@ -28,6 +28,15 @@
         </div>
     </section>
 
+    <!-- ПОДВАЛ -->
+    <footer>
+        <p>© 2026 Realm of Nations</p>
+        <p>
+            <a href="offer.html">Пользовательское соглашение</a> |
+            <a href="contacts.html">Контакты</a>
+        </p>
+    </footer>
+
     <script>
         function copyIP() {
             const ip = 'realmofnations.my-craft.cc:36020';
@@ -37,7 +46,6 @@
 
         async function getServerStatus() {
             try {
-                // Пробуем через mcapi.us
                 const response = await fetch('https://mcapi.us/server/status?ip=185.9.145.7&port=36020');
                 const data = await response.json();
 
@@ -52,7 +60,6 @@
                     count.textContent = '0';
                 }
             } catch (e) {
-                // Запасной вариант
                 try {
                     const response2 = await fetch('https://api.mcsrvstat.us/2/185.9.145.7:36020');
                     const data2 = await response2.json();
