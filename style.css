@@ -58,7 +58,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* ===== НОВАЯ КНОПКА "К АССОРТИМЕНТУ" ===== */
+/* ===== КНОПКА "К АССОРТИМЕНТУ" ===== */
 .btn {
     display: inline-block;
     background: rgba(255, 255, 255, 0.08);
@@ -73,7 +73,7 @@ body {
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
     min-width: 260px;
-    margin-top: 300px; /* Опускаем кнопку на 300px ниже */
+    margin-top: 350px; /* Опускаем кнопку ниже */
 }
 
 .btn:hover {
@@ -121,7 +121,7 @@ body {
         padding: 12px 32px;
         font-size: 15px;
         min-width: 200px;
-        margin-top: 200px; /* На телефонах тоже опускаем */
+        margin-top: 200px;
     }
     .ip-corner {
         bottom: 15px;
