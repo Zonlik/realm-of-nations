@@ -5,52 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Realm of Nations — Minecraft сервер</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Партиклы фон -->
+    <canvas id="particles"></canvas>
+
+    <!-- Шапка -->
     <header>
         <nav>
             <div class="logo">⚔️ Realm of Nations</div>
             <ul>
-                <li><a href="#about">О сервере</a></li>
+                <li><a href="#about" class="smooth">О сервере</a></li>
                 <li><a href="donate.html">Донат</a></li>
                 <li><a href="rules.html">Правила</a></li>
+                <li><a href="#status" class="smooth">Статус</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Герой -->
     <section class="hero">
         <div class="hero-content">
-            <h1>⚔️ Realm of Nations</h1>
-            <p>Политический Minecraft сервер, где ты создаёшь свою империю</p>
+            <h1 class="glitch" data-text="⚔️ Realm of Nations">⚔️ Realm of Nations</h1>
+            <p class="typing">Политический Minecraft сервер, где ты создаёшь свою империю</p>
             <div class="ip-box">
                 <span id="ip">realmofnations.my-craft.cc:36020</span>
                 <button onclick="copyIP()">📋 Копировать</button>
             </div>
             <p class="online-status" id="status">🟢 Онлайн: <span id="players">0</span> игроков</p>
-            <a href="#about" class="btn">Начать приключение</a>
+            <a href="#about" class="btn btn-glow">Начать приключение</a>
         </div>
     </section>
 
+    <!-- О сервере -->
     <section id="about" class="about">
-        <h2>🌟 О сервере</h2>
-        <p><strong>Realm of Nations</strong> — это уникальный политический сервер, где каждый игрок может стать лидером своей деревни, создавать союзы, торговать и воевать.</p>
+        <h2 data-aos="fade-up">🌟 О сервере</h2>
+        <p data-aos="fade-up" data-aos-delay="100"><strong>Realm of Nations</strong> — это уникальный политический сервер, где каждый игрок может стать лидером своей деревни, создавать союзы, торговать и воевать.</p>
         <div class="features">
-            <div class="feature">
+            <div class="feature" data-aos="flip-up" data-aos-delay="100">
                 <span>🏰</span>
                 <h3>Политика</h3>
                 <p>Создавай деревни, объединяйся в нации и управляй территориями</p>
             </div>
-            <div class="feature">
+            <div class="feature" data-aos="flip-up" data-aos-delay="200">
                 <span>💰</span>
                 <h3>Экономика</h3>
                 <p>Торгуй, зарабатывай и становись самым богатым игроком</p>
             </div>
-            <div class="feature">
+            <div class="feature" data-aos="flip-up" data-aos-delay="300">
                 <span>⚔️</span>
                 <h3>Войны</h3>
                 <p>Сражайся за земли, защищай свою нацию и захватывай новые территории</p>
             </div>
-            <div class="feature">
+            <div class="feature" data-aos="flip-up" data-aos-delay="400">
                 <span>🤝</span>
                 <h3>Сообщества</h3>
                 <p>Найди друзей, создай клан и вместе стройте великую империю</p>
@@ -58,6 +67,7 @@
         </div>
     </section>
 
+    <!-- Статус сервера -->
     <section id="status" class="status">
         <h2>🟢 Статус сервера</h2>
         <div class="status-card">
@@ -76,16 +86,19 @@
         </div>
     </section>
 
+    <!-- Кнопка доната -->
     <section class="donate-cta">
         <h2>👑 Поддержи сервер</h2>
         <p>Купи титул и получи уникальные привилегии!</p>
         <a href="donate.html" class="btn btn-gold">Перейти в магазин</a>
     </section>
 
+    <!-- Подвал -->
     <footer>
         <p>© 2026 Realm of Nations. Сделано с ❤️</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

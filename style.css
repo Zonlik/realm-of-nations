@@ -9,15 +9,34 @@ body {
     background: #0a0a1a;
     color: #fff;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
+/* ===== ПАРТИКЛЫ ===== */
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ===== ШАПКА ===== */
 header {
-    background: rgba(10, 10, 26, 0.95);
-    padding: 20px 40px;
+    background: rgba(10, 10, 26, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 16px 40px;
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+    transition: all 0.3s;
+}
+
+header:hover {
+    border-bottom: 1px solid rgba(255, 215, 0, 0.4);
 }
 
 nav {
@@ -29,9 +48,15 @@ nav {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     color: #ffd700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
 }
 
 nav ul {
@@ -41,47 +66,132 @@ nav ul {
 }
 
 nav a {
-    color: #ccc;
+    color: #aaa;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, text-shadow 0.3s;
+    position: relative;
 }
 
-nav a:hover,
-nav a.active {
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffd700;
+    transition: width 0.3s;
+}
+
+nav a:hover {
     color: #ffd700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
 }
 
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== ГЕРОЙ ===== */
 .hero {
     min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, #0a0a1a 0%, #1a0a00 100%);
+    background: radial-gradient(ellipse at center, rgba(26, 10, 0, 0.6) 0%, rgba(10, 10, 26, 0.9) 100%);
     padding: 20px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeInUp 1.2s ease;
 }
 
 .hero-content h1 {
-    font-size: 64px;
+    font-size: 72px;
     color: #ffd700;
     margin-bottom: 20px;
+    text-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 48px;
 }
 
-.hero-content p {
-    font-size: 20px;
+/* Glitch эффект */
+.glitch {
+    position: relative;
+    animation: glitch 3s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.glitch::before {
+    color: #ff6b6b;
+    animation: glitchShift 3s infinite;
+    clip-path: inset(20% 0 60% 0);
+}
+
+.glitch::after {
+    color: #4ecdc4;
+    animation: glitchShift 3s infinite reverse;
+    clip-path: inset(60% 0 20% 0);
+}
+
+@keyframes glitchShift {
+    0%, 100% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-1px, 1px); }
+    80% { transform: translate(1px, -1px); }
+}
+
+.typing {
+    font-size: 22px;
     color: #ccc;
     margin-bottom: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #ffd700;
+    animation: typing 3s steps(40) 1s forwards, blink 0.75s step-end infinite;
+    max-width: 0;
+    display: inline-block;
+}
+
+@keyframes typing {
+    from { max-width: 0; }
+    to { max-width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
 }
 
 .ip-box {
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 215, 0, 0.3);
+    border: 1px solid rgba(255, 215, 0, 0.25);
     border-radius: 12px;
     padding: 16px 24px;
     display: inline-flex;
     align-items: center;
     gap: 16px;
     margin-bottom: 20px;
+    transition: all 0.3s;
+    backdrop-filter: blur(8px);
+}
+
+.ip-box:hover {
+    border-color: #ffd700;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
 }
 
 .ip-box span {
@@ -96,6 +206,12 @@ nav a.active {
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
+    transition: all 0.3s;
+}
+
+.ip-box button:hover {
+    background: #e6c200;
+    transform: scale(1.05);
 }
 
 .btn {
@@ -106,25 +222,39 @@ nav a.active {
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    transition: all 0.3s;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
 }
 
-.btn:hover {
+.btn-glow {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.btn-glow:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.4);
 }
 
+.btn-gold {
+    background: #ffd700;
+}
+
+/* ===== СЕКЦИИ ===== */
 section {
     padding: 80px 40px;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 42px;
     color: #ffd700;
     text-align: center;
     margin-bottom: 40px;
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
 }
 
 .features {
@@ -135,15 +265,23 @@ h2 {
 }
 
 .feature {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.04);
     padding: 30px;
     border-radius: 16px;
     text-align: center;
-    border: 1px solid rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.08);
+    transition: all 0.4s;
+    backdrop-filter: blur(4px);
+}
+
+.feature:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: rgba(255, 215, 0, 0.3);
+    box-shadow: 0 12px 40px rgba(255, 215, 0, 0.08);
 }
 
 .feature span {
-    font-size: 40px;
+    font-size: 48px;
     display: block;
     margin-bottom: 16px;
 }
@@ -155,155 +293,52 @@ h2 {
 
 .donate-cta {
     text-align: center;
-    background: rgba(255, 215, 0, 0.05);
-    border-radius: 16px;
+    background: radial-gradient(ellipse at center, rgba(255, 215, 0, 0.06) 0%, transparent 70%);
+    border-radius: 20px;
     padding: 60px 40px;
+    border: 1px solid rgba(255, 215, 0, 0.08);
 }
 
-.btn-gold {
-    background: #ffd700;
+/* ===== СТАТУС ===== */
+.status-card {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 215, 0, 0.08);
+    flex-wrap: wrap;
 }
 
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.status-item .label {
+    color: #888;
+}
+
+.status-item .value {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* ===== ПОДВАЛ ===== */
 footer {
     text-align: center;
     padding: 40px;
-    border-top: 1px solid rgba(255, 215, 0, 0.1);
-    color: #666;
+    border-top: 1px solid rgba(255, 215, 0, 0.08);
+    color: #555;
 }
 
-/* ===== ДОНАТ ===== */
-.donate-page {
-    padding: 80px 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.donate-page h1 {
-    font-size: 48px;
-    color: #ffd700;
-    margin-bottom: 16px;
-}
-
-.donate-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
-}
-
-.donate-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 215, 0, 0.2);
-    border-radius: 16px;
-    padding: 30px 24px;
-    transition: transform 0.3s;
-}
-
-.donate-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 40px rgba(255, 215, 0, 0.15);
-}
-
-.donate-icon {
-    font-size: 48px;
-    margin-bottom: 12px;
-}
-
-.donate-card h3 {
-    font-size: 24px;
-    color: #ffd700;
-}
-
-.price {
-    font-size: 22px;
-    color: #ff6b6b;
-    font-weight: bold;
-    margin: 8px 0 16px;
-}
-
-.donate-card ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.donate-card ul li {
-    color: #ccc;
-    padding: 4px 0;
-}
-
-.donate-card button {
-    background: #ffd700;
-    color: #0a0a1a;
-    border: none;
-    padding: 12px 32px;
-    border-radius: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    width: 100%;
-}
-
-.donate-card button:hover {
-    background: #e6c200;
-}
-
-.donate-info {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    padding: 30px;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.donate-info h3 {
-    color: #ffd700;
-    text-align: center;
-    margin-bottom: 16px;
-}
-
-.donate-info p {
-    color: #ccc;
-    padding: 6px 0;
-}
-
-/* ===== ПРАВИЛА ===== */
-.rules-page {
-    padding: 80px 40px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.rules-page h1 {
-    font-size: 48px;
-    color: #ffd700;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.rule-item {
-    display: flex;
-    gap: 20px;
-    padding: 20px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.rule-number {
-    font-size: 28px;
-    color: #ffd700;
-    font-weight: bold;
-    min-width: 40px;
-}
-
-.rule-item h3 {
-    color: #fff;
-    margin-bottom: 4px;
-}
-
-.rule-item p {
-    color: #aaa;
+/* ===== АНИМАЦИИ ===== */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== АДАПТИВ ===== */
@@ -312,12 +347,17 @@ footer {
         display: none;
     }
     .hero-content h1 {
-        font-size: 40px;
+        font-size: 32px;
+        font-family: 'Segoe UI', sans-serif;
     }
     .ip-box {
         flex-direction: column;
     }
-    .donate-grid {
+    .features {
         grid-template-columns: 1fr;
+    }
+    .status-card {
+        flex-direction: column;
+        align-items: center;
     }
 }
