@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realm of Nations — Minecraft сервер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">⚔️ Realm of Nations</div>
+            <ul>
+                <li><a href="#about">О сервере</a></li>
+                <li><a href="donate.html">Донат</a></li>
+                <li><a href="rules.html">Правила</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>⚔️ Realm of Nations</h1>
+            <p>Политический Minecraft сервер, где ты создаёшь свою империю</p>
+            <div class="ip-box">
+                <span id="ip">realmofnations.my-craft.cc:36020</span>
+                <button onclick="copyIP()">📋 Копировать</button>
+            </div>
+            <p class="online-status" id="status">🟢 Онлайн: <span id="players">0</span> игроков</p>
+            <a href="#about" class="btn">Начать приключение</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>🌟 О сервере</h2>
+        <p><strong>Realm of Nations</strong> — это уникальный политический сервер, где каждый игрок может стать лидером своей деревни, создавать союзы, торговать и воевать.</p>
+        <div class="features">
+            <div class="feature">
+                <span>🏰</span>
+                <h3>Политика</h3>
+                <p>Создавай деревни, объединяйся в нации и управляй территориями</p>
+            </div>
+            <div class="feature">
+                <span>💰</span>
+                <h3>Экономика</h3>
+                <p>Торгуй, зарабатывай и становись самым богатым игроком</p>
+            </div>
+            <div class="feature">
+                <span>⚔️</span>
+                <h3>Войны</h3>
+                <p>Сражайся за земли, защищай свою нацию и захватывай новые территории</p>
+            </div>
+            <div class="feature">
+                <span>🤝</span>
+                <h3>Сообщества</h3>
+                <p>Найди друзей, создай клан и вместе стройте великую империю</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="status" class="status">
+        <h2>🟢 Статус сервера</h2>
+        <div class="status-card">
+            <div class="status-item">
+                <span class="label">Статус:</span>
+                <span class="value" id="server-status">Загрузка...</span>
+            </div>
+            <div class="status-item">
+                <span class="label">Онлайн:</span>
+                <span class="value" id="online-players">0</span>
+            </div>
+            <div class="status-item">
+                <span class="label">Версия:</span>
+                <span class="value" id="server-version">1.21.11</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="donate-cta">
+        <h2>👑 Поддержи сервер</h2>
+        <p>Купи титул и получи уникальные привилегии!</p>
+        <a href="donate.html" class="btn btn-gold">Перейти в магазин</a>
+    </section>
+
+    <footer>
+        <p>© 2026 Realm of Nations. Сделано с ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

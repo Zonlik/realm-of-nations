@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0a1a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    background: rgba(10, 10, 26, 0.95);
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffd700;
+}
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a0a00 100%);
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    color: #ffd700;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.ip-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 12px;
+    padding: 16px 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.ip-box span {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.ip-box button {
+    background: #ffd700;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffd700;
+    color: #0a0a1a;
+    padding: 14px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+section {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 40px;
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.feature span {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.feature h3 {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.donate-cta {
+    text-align: center;
+    background: rgba(255, 215, 0, 0.05);
+    border-radius: 16px;
+    padding: 60px 40px;
+}
+
+.btn-gold {
+    background: #ffd700;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
+    color: #666;
+}
+
+/* ===== ДОНАТ ===== */
+.donate-page {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.donate-page h1 {
+    font-size: 48px;
+    color: #ffd700;
+    margin-bottom: 16px;
+}
+
+.donate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.donate-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 16px;
+    padding: 30px 24px;
+    transition: transform 0.3s;
+}
+
+.donate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 40px rgba(255, 215, 0, 0.15);
+}
+
+.donate-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.donate-card h3 {
+    font-size: 24px;
+    color: #ffd700;
+}
+
+.price {
+    font-size: 22px;
+    color: #ff6b6b;
+    font-weight: bold;
+    margin: 8px 0 16px;
+}
+
+.donate-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.donate-card ul li {
+    color: #ccc;
+    padding: 4px 0;
+}
+
+.donate-card button {
+    background: #ffd700;
+    color: #0a0a1a;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.donate-card button:hover {
+    background: #e6c200;
+}
+
+.donate-info {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.donate-info h3 {
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.donate-info p {
+    color: #ccc;
+    padding: 6px 0;
+}
+
+/* ===== ПРАВИЛА ===== */
+.rules-page {
+    padding: 80px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.rules-page h1 {
+    font-size: 48px;
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.rule-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.rule-number {
+    font-size: 28px;
+    color: #ffd700;
+    font-weight: bold;
+    min-width: 40px;
+}
+
+.rule-item h3 {
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.rule-item p {
+    color: #aaa;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    .hero-content h1 {
+        font-size: 40px;
+    }
+    .ip-box {
+        flex-direction: column;
+    }
+    .donate-grid {
+        grid-template-columns: 1fr;
+    }
+}
