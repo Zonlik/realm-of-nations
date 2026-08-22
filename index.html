@@ -37,7 +37,8 @@
 
         async function getServerStatus() {
             try {
-                const response = await fetch('https://api.mcsrvstat.us/2/realmofnations.my-craft.cc:36020');
+                // Пробуем через mcapi.us
+                const response = await fetch('https://mcapi.us/server/status?ip=185.9.145.7&port=36020');
                 const data = await response.json();
 
                 const dot = document.getElementById('status-dot');
@@ -45,19 +46,36 @@
 
                 if (data.online) {
                     dot.textContent = '🟢';
-                    count.textContent = data.players.online || '0';
+                    count.textContent = data.players.now || '0';
                 } else {
                     dot.textContent = '🔴';
                     count.textContent = '0';
                 }
             } catch (e) {
-                document.getElementById('status-dot').textContent = '🟡';
-                document.getElementById('players-count').textContent = '?';
+                // Запасной вариант
+                try {
+                    const response2 = await fetch('https://api.mcsrvstat.us/2/185.9.145.7:36020');
+                    const data2 = await response2.json();
+
+                    const dot = document.getElementById('status-dot');
+                    const count = document.getElementById('players-count');
+
+                    if (data2.online) {
+                        dot.textContent = '🟢';
+                        count.textContent = data2.players.online || '0';
+                    } else {
+                        dot.textContent = '🔴';
+                        count.textContent = '0';
+                    }
+                } catch (e2) {
+                    document.getElementById('status-dot').textContent = '🟡';
+                    document.getElementById('players-count').textContent = '?';
+                }
             }
         }
 
         getServerStatus();
-        setInterval(getServerStatus, 30000); // обновление каждые 30 секунд
+        setInterval(getServerStatus, 30000);
     </script>
 
 </body>
