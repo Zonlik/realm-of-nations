@@ -245,3 +245,32 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== ОНЛАЙН СТАТУС ===== */
+.online-status {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+}
+
+#status-dot {
+    font-size: 14px;
+}
+
+#players-count {
+    font-weight: 700;
+    color: #ffd700;
+}
