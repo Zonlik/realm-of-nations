@@ -104,3 +104,8 @@ if (typeof AOS !== 'undefined') {
 // ===== ОБНОВЛЯЕМ СТАТУС =====
 getServerStatus();
 setInterval(getServerStatus, 30000);
+
+// ===== БУРГЕР-МЕНЮ =====
+function toggleMenu() {
+    document.querySelector('nav ul').classList.toggle('active');
+}
